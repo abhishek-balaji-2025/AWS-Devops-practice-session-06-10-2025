@@ -12,7 +12,7 @@ pipeline {
 
         stage ("Create docker image") {
             steps {
-                sh 'docker built -t homepage:latest .'
+                sh 'docker build -t homepage:latest .'
             }
         }
 
