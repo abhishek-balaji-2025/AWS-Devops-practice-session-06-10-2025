@@ -12,14 +12,14 @@ pipeline {
 
         stage ("Create docker image") {
             steps {
-                sh 'docker build -t homepage:latest .'
+                sh '/usr/bin/docker build -t homepage:latest .'
             }
         }
 
         stage ("create docker container") {
             steps {
-                sh 'docker rm -f webapp || true'
-                sh 'docker run -d --name webapp -p 80:80 homepage:latest'
+                sh '/usr/bin/docker rm -f webapp || true'
+                sh '/usr/bin/docker run -d --name webapp -p 80:80 homepage:latest'
             }
         }
 
