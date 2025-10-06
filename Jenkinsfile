@@ -18,7 +18,7 @@ pipeline {
 
         stage ("create docker container") {
             steps {
-                sh 'docker run -it --name webapp -p 80:80 homepage:latest'
+                sh 'docker run -d --name webapp -p 80:80 homepage:latest'
             }
         }
 
